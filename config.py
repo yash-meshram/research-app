@@ -19,6 +19,9 @@ class Settings(BaseSettings):
     LANGSMITH_PROJECT: str
     LANGSMITH_TRACING: bool
     
+    # Embedding
+    EMBEDDING_MODEL: str
+    
     # API
     API_BASE_URL: str
     
