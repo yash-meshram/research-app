@@ -1,0 +1,26 @@
+fastapi
+uvicorn
+
+streamlit
+
+python-dotenv
+
+pydantic
+pydantic-settings
+
+langchain
+langchain-core
+langchain-community
+langchain-groq
+langgraph
+langsmith
+
+tavily-python
+
+motor                   # Async MongoDB driver for Python (works with FastAPI's async model)
+pymongo                 # Synchronous MongoDB driver (motor depends on this; also provides DESCENDING constant)
+
+httpx                   # Modern async HTTP client (used internally by several LangChain libraries)
+requests                # Simple synchronous HTTP client (used by Streamlit to call FastAPI)
+
+sentence-transformers
