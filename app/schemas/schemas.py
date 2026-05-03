@@ -27,7 +27,9 @@ class Score(BaseModel):
     
 class SessionMessage(BaseModel):
     """One Q&A session"""
+    message_id: int
     question: str
+    embeded_question: List[float]
     response: str
     referances: List[Referance]
     created_at: datetime
@@ -42,11 +44,15 @@ class SessionDetail(BaseModel):
 class ResearchState(TypedDict):
     """State for graph"""
     question: str
+    embeded_question: List[float]
+    current_message_id: int = 0
     session_id: str
     chat_history: List[SessionMessage]
+    relevant_prev_message_id: List[int]
     search_queries: List[str]
     raw_search_data: List[Dict[str, Any]]
-    ranked_search_data: List[Dict[str, Any]]
-    report: str
+    # ranked_search_data: List[Dict[str, Any]]
+    response: str
     referances: List[Referance]
+    next_agent: str
     
